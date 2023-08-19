@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #E893CF, #9376E0);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.menu li {
+    position: absolute;
+    list-style: none;
+    left: 0;
+    transform-origin: 150px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(120px);
+}
+
+
+.menu li img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0.5px .5px 5px rgba(0, 0, 0, 0.4);
+    display: block;
+    transform: rotate(calc(240deg/ -4 * var(--i)));
+}
+.btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    font-size: 2em;
+    transition: transform 1.2s;
+}
+.menu h1{
+    position: absolute;
+    bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    color: #F6FFA6;
+}
+
+.menu.active .btn{
+    transform: rotate(225deg);
+}
+
+.menu.active li{
+    transform: rotate(calc(240deg/4 * var(--i)));
+}

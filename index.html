@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="btn"><ion-icon name="add-outline"></ion-icon></div>
+        <h1>My Family</h1>
+        <li style="--i:0;"><img src="img/ayah.jpg" alt=""></li>
+        <li style="--i:1;"><img src="img/mamas.jpg" alt=""></li>
+        <li style="--i:2;"><img src="img/dedek.jpg" alt=""></li>
+        <li style="--i:3;"><img src="img/bunda.jpg" alt=""></li>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let menu = document.querySelector('.menu');
+        let btn = document.querySelector('.btn');
+        btn.onclick = function () {
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
